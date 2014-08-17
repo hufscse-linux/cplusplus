@@ -5,13 +5,12 @@ struct IntValue {
   : value(value) {}
 };
 
-struct Functor
-  : public IntValue {
-
+struct Functor {
+  int value;
   Functor(int value)
-   : IntValue(value) {}
+  : value(value) {}
 
-  bool operator()(const Functor& a, const Functor& b) {
-    return a.value < b.value;
+  bool operator()(const Functor* a, const Functor* b) {
+    return a->value > b->value;
   }
 };

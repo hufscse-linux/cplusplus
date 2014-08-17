@@ -6,9 +6,9 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-  IntValue* values[10];
+  Functor* values[10];
   for(int i = 0; i < 10; ++i) {
-    values[i] = new IntValue(i);
+    values[i] = new Functor(10-i);
     cout << values[i]->value << " ";
   }
   cout << endl;
